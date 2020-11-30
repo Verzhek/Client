@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+</head>
+<body>
+    <section>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function cleanSlice(word){
+            let sliced="";
+            for (var i = 0; i <word.length/2; i++) {
+                sliced += word[i];
+            }
+            return sliced;
+        }
+        function printlast(word){
+            let final="";
+            final=word[(word.length-1)];
+            return final;
+        }
+        function reverse(word) {
+            var reverese = "";
+            for (var i = word.length - 1; i > -1; i--) {
+                reverese += word[i];
+            }
+            return reverese;
+        }
+        function minuses(word){
+            var minused="";
+            sl=word.length-1;
+            for(var i=0;i<(sl);i++){
+                minused+=word[i]+"-";
+            }
+            minused+=word[sl]
+            return minused;
+        }
+        function vocalCount(word){
+            let khornetry=0;
+            for(let i=0;i<word.length;i++){
+                word=word.toLowerCase();
+                if(/[^aeiouAEIOU\s]+$/.test(word[i])){
+                    khornetry++;
+                }
+            }
+                return khornetry;
+        }
+        var res = "";
+        do {
+            res = prompt("dame una palabra");
+        } while (!/^[a-zA-Z()]+$/.test(res));
+        var answer = "<div><h3>" + res + "</h3></div>";
+         answer += "<div><h3>Halfed: " + cleanSlice(res) + "</h3></div>";
+         answer += "<div><h3>Last char:" + printlast(res) + "</h3></div>";
+         answer += "<div><h3>Reverse: " + reverse(res) + "</h3></div>";
+         answer += "<div><h3>Fill -:" + minuses(res) + "</h3></div>";
+         answer += "<div><h3>Vocals:" + vocalCount(res) + "</h3></div>";
+
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+    </script>
+</body>
+</html>

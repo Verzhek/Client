@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio10</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <section>
+        <article id="ans">
+
+        </article>
+    </section>
+    <script>
+        var results=[];
+        var str="";
+        do{
+            var str=prompt("give me a word");
+            str=str.toLowerCase();
+            if(/^[a-zA-Z()]+$/.test(str)){
+                results.push(str);
+            }
+        }while(str!="fin");
+        let answer = "<div><h3>La cantidad de palabras es " + results.length + "</h3></div>";
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+    </script>
+</body>
+</html>
+</body>
+</html>

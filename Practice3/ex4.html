@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <section>
+        <article id="checks"></article>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function translateMonth(num){
+            switch(num){
+                case 0:
+                    return "Jan";
+                break;
+                case 1:
+                    return "Deb";
+                break;
+                case 2:
+                    return "Mar";
+                break;
+                case 3:
+                    return "Apr;";
+                break;
+                case 4:
+                    return "May";
+                break;
+                case 5:
+                    return "Jun";
+                break;
+                case 6:
+                    return "Jul";
+                break;
+                case 7:
+                    return "Aug";
+                break;
+                case 8:
+                    return "Sep";
+                break;
+                case 9:
+                    return "Oct";
+                break;
+                case 10:
+                    return "Nov";
+                break;
+                case 11:
+                    return "Dec";
+                break;
+            }
+        }
+        let mon;
+        let checGetDate = new Date();
+        let checks = "<div><h3>El  mes  es "+(checGetDate.getMonth()+1)+" o en lenguaje humano: "+ translateMonth(checGetDate.getMonth())+"</h3></div>";
+        document.getElementById("checks").insertAdjacentHTML("beforeend", checks);
+        do{
+                mon=prompt("Dame un numero de mes Enero siendo 0");
+        }while(isNaN(mon)||mon<0||mon>11); 
+        mon=parseInt(mon);
+        let answer="<div><h3>El mes de numero introducido es "+translateMonth(mon)+" </h3></div>";
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <section id="ans">
+       
+    </section>
+    <script>
+        for(var i=0;i<6;i++){
+            let ans=(Math.round(Math.random()*48))+1;
+            let answer="<article><div><h3>El numero es "+ans+"</h3></div></article>";
+            document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+        }
+    </script>
+
+</body>
+
+</html>

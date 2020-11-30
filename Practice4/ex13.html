@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    <script>
+        var info=new Array();
+        info["height"]=window.innerHeight;
+        info["width"]=window.innerWidth;
+        info["url"]=window.location.href;
+        info["host"]=window.location.host;
+        info["hostname"]=window.location.hostname;
+        info["port"]=window.location.port;
+        info["protocol"]=window.location.protocol;
+        var string="<p>El url de pagina origen es:"+info["url"]+"</p>";
+         string+="<p>El host de pagina origen es:"+info["host"]+"</p>";
+         string+="<p>El hostname de pagina origen es:"+info["hostname"]+"</p>";
+         string+="<p>El port de pagina origen es:"+info["port"]+"</p>";
+         string+="<p>El concat de pagina origen es:"+info["protocol"]+"</p>";
+
+        var answer=window.open("");
+        answer.document.implementation.createHTMLDocument("Analisis");
+        answer.document.getElementsByTagName("body").item(0).innerHTML=string;
+        
+    </script>
+</body>
+</html>

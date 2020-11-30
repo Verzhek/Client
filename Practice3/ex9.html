@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <section>
+        <article id="ans">
+
+        </article>
+    </section>
+    <script>
+        var results=[];
+        var str="";
+        do{
+            var str=prompt("give me a word");
+            if(/^[a-zA-Z()]+$/.test(str)){
+                results.push(str);
+            }
+        }while(str!="Fin");
+        let answer = "<div><h3>La cantidad de palabras es " + results.length + "</h3></div>";
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+    </script>
+</body>
+</html>

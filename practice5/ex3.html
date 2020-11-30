@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3</title>
+</head>
+
+<body>
+    <section>
+        <article id="form">
+                <fieldset>
+                    <legend>width m2</legend>
+                    <input type="number" min="3" max="15" id="width" required>
+                </fieldset>
+                <fieldset>
+                    <legend>height m2</legend>
+                    <input type="number" min="2" max="10" id="height" required>
+                </fieldset>
+                <fieldset>
+                    <legend>room number</legend>
+                    <input type="number" min="2" max="8" id="rooms" required>
+                </fieldset>
+                <fieldset>
+                    <legend>price</legend>
+                    <input type="number" min="30000" max="10000000000" id="price" required>
+                </fieldset>
+                <fieldset>
+                    <legend>tax%</legend>
+                    <input type="number" min="0" max="50" id="tax" required>
+                </fieldset>
+                <button id="send">Send</button>
+        </article>
+        <article id="ans">
+
+        </article>
+    </section>
+    <script>
+        function piso(width, height, num_rooms, price, tax) {
+            this.width = width
+            this.height = height
+            this.num_rooms = num_rooms
+            this.price = price
+            this.tax =  (this.price * (tax / 100));
+    
+            this.print = function () {
+                let total=parseFloat(this.tax) + parseFloat(this.price);
+                document.getElementById("ans").insertAdjacentHTML("beforeend", `<hr><div>
+                <h1>width:`+ this.width + `</h1>
+                <h1>height:`+ this.height + `</h1>
+                <h1>number of rooms:`+ this.num_rooms + `</h1>
+                <h1>price:`+ this.price + `</h1>
+                <h1>IVA tax:`+ this.tax + `</h1>
+                <h1>Total:`+ total+ `</h1>
+                </div>`)
+            }
+        }
+        var answer = "";
+        document.getElementById("send").addEventListener("click", function () {
+            let hype = document;
+            let width = hype.getElementById("width").value;
+            let height = hype.getElementById("height").value;
+            let rooms = hype.getElementById("rooms").value;
+            let price = hype.getElementById("price").value;
+            let tax = hype.getElementById("tax").value;
+            answer = new piso(width, height, rooms, price, tax);
+            answer.print();
+            document.getElementById("form").style.visibility="hidden";
+            document.getElementById("form").style.height=0;
+
+        })
+
+    </script>
+</body>
+
+</html>

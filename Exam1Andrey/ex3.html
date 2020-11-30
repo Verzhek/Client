@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Examen 1</h1>
+        <h1>Ejercicio 3</h1>
+    </header>
+    <section>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function esConsonante(leter) {
+            if (typeof leter == "string" && leter.length == 1) {
+                leter = leter.toLowerCase();
+                if (leter != 'a' || leter != "i" || leter != "u" || leter != "e" || leter != "o") {
+
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function printMessage() {
+            let char = "";
+            let result = "";
+            while (char != "*") {
+                char = prompt("dame un caracter");
+                if (esConsonante(char)) {
+                    result += char;
+                }
+            }
+            return result;
+        }
+        document.getElementById("ans").insertAdjacentHTML("beforeend", "<h3>" + printMessage() + "</h3>");
+    </script>
+    <footer></footer>
+
+</body>
+
+</html>

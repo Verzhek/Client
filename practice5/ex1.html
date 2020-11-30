@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+</head>
+<body>
+    <section>
+        <article id="ans"> 
+
+        </article>
+    </section>
+    <script>
+        function producto_alimenticio(codigo,nombre,precio){
+         
+            this.codigo=codigo
+            this.nombre=nombre
+            this.precio=precio
+            this.imprimedatos =function() {
+                document.getElementById("ans").insertAdjacentHTML("beforeend",`<hr><div>
+                <h1>codigo:`+this.codigo+`</h1>
+                <h1>nombre:`+this.nombre+`</h1>
+                <h1>precio:`+this.precio+`</h1>
+                </div>`)
+            }
+            
+        }
+    
+        var queso_gauda=new producto_alimenticio("ch0001","queso gauda",2.50);
+        var a_grade_stake=new producto_alimenticio("me0001","steak de grado A",5);
+        var cokacola=new producto_alimenticio("dr0001","Coka Cola",2.50);
+        var collector=[queso_gauda,a_grade_stake,cokacola];
+        collector.forEach(element => {
+            element.imprimedatos();
+        });
+    </script>
+</body>
+</html>

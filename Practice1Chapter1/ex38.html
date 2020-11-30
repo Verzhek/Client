@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 38</h1>
+    </header>
+    <script>
+        var num1 = parseInt(prompt("Give me a number"));
+        function divesores(num1) {
+            if (typeof num1 == "number" && num1 > 0) {
+                var i = 0;
+                var res = [];
+                while (i != num1) {
+                    if (num1 % i == 0) {
+                        res.push(i);
+                    }
+                    i++;
+                }
+                return res;
+            } else {
+                document.write("<h2>Invalid data type exception</h2>");
+            }
+        }
+        function esPerfecto(num1){
+            var op=divesores(num1);
+            var res=0;
+            alert(op);
+            op.forEach(element => {
+                res+=element;
+            });
+            alert(res);
+            if(res==num1){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        if(esPerfecto(num1)){
+            document.write("<h2>"+num1+" es perfecto</h2>")
+        }else{
+            document.write("<h2>"+num1+" no es perfecto</h2>")
+        }
+    </script>
+</body>
+
+</html>

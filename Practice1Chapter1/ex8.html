@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 8</h1>
+    </header>
+    <script>
+        var num1=parseFloat(prompt("Give me a number"));
+        var num2=parseFloat(prompt("Give me another number"));
+        if(typeof num1=="number"&&typeof num2=="number"){
+            if(num1>0&&num2){
+                document.write("<h2>Andrey</h2>");
+            }else if(num1>0&&num2>=num1){
+                document.write("<h2>Kravchenko</h2>");
+            }else if(num1<0){
+                document.write("<h2>Andrey Kravchenko</h2>");
+            }
+        }else{
+            document.write("<h2>Invalid data type exception</h2>");
+        }
+    </script>
+</body>
+
+</html>

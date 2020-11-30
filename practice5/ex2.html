@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+<body>
+    <section>
+        <article id="ans"> 
+
+        </article>
+    </section>
+    <script>
+        function cd_music(titulo,grupo,fecha){
+         
+            this.titulo=titulo
+            this.grupo=grupo
+            this.fecha=fecha
+            this.imprimedatos =function() {
+                document.getElementById("ans").insertAdjacentHTML("beforeend",`<hr><div>
+                <h1>titulo:`+this.titulo+`</h1>
+                <h1>grupo:`+this.grupo+`</h1>
+                <h1>fecha:`+this.fecha+`</h1>
+                </div>`)
+            }
+            
+        }
+    
+        var ghost_stories=new cd_music("Sexy Sexy","Cascade","27/11/2007");
+        var muahaha=new cd_music("Evil Has A Name","Hail The Villan","17/05/2010");
+        var vortex_crockgar=new cd_music("Battle for Eternity","Gloryhammer","30/05/2019");
+        var collector=[ghost_stories,muahaha,vortex_crockgar];
+        collector.forEach(element => {
+            element.imprimedatos();
+            
+        });
+    </script>
+</body>
+</html>

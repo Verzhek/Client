@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="form">
+        <article>
+            <form>
+                <fieldset>
+                    <legend>MSRB Mercenary recognition form</legend>
+                    <h1>Attention should Comstar ROM identify any attempt at falsification of the information in this
+                        form the company will be ordered disbading or will be exterminated</h1>
+                    <label><input type="text" >Company Name</label></br>
+                    <label><textarea cols="80" rows="10"></textarea>Speciality</label></br>
+
+                    <label><input type="number" value="0" min="0" max="1000">Number of light vehicles</label></br>
+                    <label><input type="number" value="0" min="0" max="1000">Number of APCs</label></br>
+                    <label><input type="number" value="0" min="0" max="1000">Number of Artillery</label></br>
+                    <label><input type="number" value="0" min="0" max="1000">Number of Tanks</label></br>
+                    <label><input type="number" value="0" min="0" max="1000">Tactical Missile Vehicles</label></br>
+                    <label><input type="number" value="0" min="0" max="1000">Strategic missiles</label></br>
+                    <label><input type="number" value="0" min="0" max="1000">Light mechs</label></br>
+                    <label><input type="number" value="0" min="0" max="1000">Medium mechs</label> </br>
+                    <label><input type="number" value="0" min="0" max="1000">Assault mechs</label></br>
+                    <label><input type="number" value="0" min="0" max="1000">Heavy Mechs</label></br>
+                    <label><input type="number" value="0" min="0" max="1000">Battle Armors</label></br>
+                    <label><input type="number" value="0" min="0" max="1000">Aerospace fighters</label></br>
+
+                    <label><input type="radio" value="0">Class S weaponry</label></br>
+                    <label><input type="radio" value="0">Class A weaponry</label></br>
+                    <label><input type="radio" value="0">Dropships</label></br>
+
+                    <label><input type="number" min="2" max="5" value="2">Average level of technology available</label></br>
+                </fieldset>
+                <button>Enviar</button>
+                <button>Borrar</button>
+                <button onclick="printer()">Imprimir</button>
+
+            </form>
+        </article>
+    </section>
+    <script>
+        function printer(){
+            window.print()
+        }
+    </script>
+</body>
+
+</html>

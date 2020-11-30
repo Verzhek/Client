@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+</head>
+<body>
+    <section>
+        <article id="ans">
+            <div>
+                <button id="openW" onclick="openW()">Open</button>
+                <button id="closeW" onclick="closeW()">Close</button>
+
+            </div>
+        </article>
+    </section>
+    <script>
+        var newWindow="";
+        function openW() {
+            newWindow= window.open("https://www.youtube.com/watch?v=SjVE2N6Ra04&list=RDH0o0CuhwJSg&index=6",height=100,width=200,fullscreen=0);
+        }
+        function closeW(){
+            newWindow.close();
+        }
+    </script>
+
+</body>
+</html>

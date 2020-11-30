@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 27</h1>
+    </header>
+    <script>
+        var hex =parseFloat(prompt("Give me a number"));
+        if (typeof hex == "number" && hex>0) {
+            document.write("<ul>");
+            var result="";
+            var count=0;
+            var par=0;
+            var imp=0;
+            while(count!=20){
+                hex = parseFloat(prompt("Give me a another number"));
+                if(typeof hex != "number" && hex>1){
+                    hex = (prompt("Give me a number * and I mean A NUMBER"));
+                }
+                
+                result+="<li>Numero introducido:"+hex+"</li>";
+            
+                count++;
+                if(hex%2==0){
+                    par++;
+                }else{
+                    imp++;
+                }
+            }
+            result+="<li>Cantidad pares:"+par+"</li>";
+            result+="<li>Cantidad impares:"+imp+"</li>";
+            document.write(result);
+            document.write("</ul>");
+        } else {
+            document.write("<h2>Invalid data type exception</h2>");
+        }
+    </script>
+</body>
+
+</html>

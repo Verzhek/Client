@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+    <style>
+        section {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+        }
+
+        #f1 {
+            flex-basis: 80%;
+
+        }
+
+        img {
+            width: 80%;
+            margin-left: 20%;
+        }
+
+        #panel {
+            flex-basis: 100%;
+            display: flex;
+            flex-flow: row wrap;
+
+        }
+
+        button {
+            flex-basis: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <article id="f1"><img src='./cthulu.jpg' id="1"></article>
+
+        <article id="panel">
+            <button id="left" onclick="move_left()">&#129152;</button>
+            <button id="right" onclick="move_rigth()">&#129146;</button>
+        </article>
+
+    </section>
+    <script>
+        if (document.getElementById("f1").children.item(0).id == "1") {
+            document.getElementById("left").disabled = true;
+        } else if (document.getElementById("f1").children.item(0).id == "4") {
+            document.getElementById("right").disabled = true;
+        } else {
+            document.getElementById("left").enabled = true;
+            document.getElementById("right").enabled = true;
+        }
+
+        function move_rigth() {
+            let num_id = parseInt(document.getElementById("f1").children.item(0).id);
+            num_id++;
+            switch (num_id) {
+                case 1:
+                    document.getElementById("f1").children.item(0).src = "./cthulu.jpg"
+                    document.getElementById("left").disabled = true;
+
+                    break;
+                case 2:
+                    document.getElementById("f1").children.item(0).src = "./hastur.png"
+                    document.getElementById("left").disabled = false;
+
+                    break;
+                case 3:
+                    document.getElementById("f1").children.item(0).src = "./sothot.jpg"
+                    document.getElementById("right").disabled = false;
+
+                    break;
+                case 4:
+                    document.getElementById("f1").children.item(0).src = "./shub.jpg"
+                    document.getElementById("right").disabled = true;
+
+                    break;
+            }
+            document.getElementById("f1").children.item(0).id = num_id;
+        }
+
+        function move_left() {
+            let num_id = parseInt(document.getElementById("f1").children.item(0).id);
+            num_id--;
+            switch (num_id) {
+                case 1:
+                    document.getElementById("f1").children.item(0).src = "./cthulu.jpg"
+                    document.getElementById("left").disabled = true;
+
+                    break;
+                case 2:
+                    document.getElementById("f1").children.item(0).src = "./hastur.png"
+                    document.getElementById("left").disabled = false;
+
+                    break;
+                case 3:
+                    document.getElementById("f1").children.item(0).src = "./sothot.jpg"
+                    document.getElementById("right").disabled = false;
+
+                    break;
+                case 4:
+                    document.getElementById("f1").children.item(0).src = "./shub.jpg"
+                    document.getElementById("right").disabled = true;
+
+                    break;
+            }
+            document.getElementById("f1").children.item(0).id = num_id;
+        }
+        
+
+    </script>
+
+</html>
+
+</html>
+</body>
+
+</html>

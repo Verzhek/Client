@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <section>
+        <article id="checks"></article>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function translateMonth(num){
+            switch(num){
+                case 0:
+                    return "January";
+                break;
+                case 1:
+                    return "February";
+                break;
+                case 2:
+                    return "March";
+                break;
+                case 3:
+                    return "Apri;";
+                break;
+                case 4:
+                    return "May";
+                break;
+                case 5:
+                    return "June";
+                break;
+                case 6:
+                    return "July";
+                break;
+                case 7:
+                    return "August";
+                break;
+                case 8:
+                    return "September";
+                break;
+                case 9:
+                    return "Ocotber";
+                break;
+                case 10:
+                    return "November";
+                break;
+                case 11:
+                    return "December";
+                break;
+            }
+        }
+        let mon;
+        let checGetDate = new Date();
+        let checks = "<div><h3>El  mes  es "+(checGetDate.getMonth()+1)+" o en lenguaje humano: "+ translateMonth(checGetDate.getMonth())+"</h3></div>";
+        document.getElementById("checks").insertAdjacentHTML("beforeend", checks);
+        do{
+                mon=prompt("Dame un numero de mes Enero siendo 0");
+        }while(isNaN(mon)||mon<0||mon>11); 
+        mon=parseInt(mon);
+        let answer="<div><h3>El mes de numero introducido es "+translateMonth(mon)+" </h3></div>";
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+
+    </script>
+</body>
+</html>

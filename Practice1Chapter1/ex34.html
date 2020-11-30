@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 34</h1>
+    </header>
+    <script>
+        function numSuccesion(num1, letter) {
+            var sum=0;
+            for(var i=1;i<num1+1;i++){
+                sum+=i;
+            }
+            var result="<h2>El resultado total de la sucesion es "+sum+"</h2>";
+            return result;
+        }
+
+        num = parseInt(prompt("Give me a number"));
+        document.write(numSuccesion(num));
+
+    </script>
+</body>
+
+</html>

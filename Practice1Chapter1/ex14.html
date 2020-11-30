@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 14</h1>
+    </header>
+    <script>
+        var num1 = parseInt(prompt("Give me a number"));
+        var primo = true;
+        if (typeof num1 == "number" && num1 > 0) {
+            document.write("<h2>");
+            for (var i = 2; i < num1; i++) {
+
+                if (num1 % i == 0) {
+                    primo = false;
+                }
+
+            }
+            if (primo) {
+                document.write(num1 + " es primo");
+            } else {
+                document.write(num1 + " no es primo");
+            }
+            document.write("</h2>");
+        } else {
+            document.write("<h2>Invalid data type exception</h2>");
+        }
+    </script>
+</body>
+
+</html>

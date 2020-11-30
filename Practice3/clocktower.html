@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            background-color: black;
+            color: white;
+            font-size: xx-large;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="clocktower" id="clocktower" maxlength="8" value="00:00:00">
+    </form>
+    <script>
+        function clock(){
+            let fecha=new Date();
+            let hora=fecha.getHours();
+            let minutes=fecha.getMinutes();
+            let segundos=fecha.getSeconds();
+            if(segundos<10){
+                segundos="0"+segundos;
+            }
+            if(hora<10){
+                hora="0"+hora;
+            }
+            if(minutes<10){
+                minutes="0"+minutes;
+            }
+            return(hora+":"+minutes+":"+segundos);
+        }
+        function setTime(){
+            document.getElementById("clocktower").value=clock();
+        }
+        setInterval("setTime()",100);
+        setInterval("alert('Get of your arse you fucker')",60000);
+    </script>
+</body>
+</html>

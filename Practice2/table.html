@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablePainter</title>
+</head>
+
+<body>
+    <section>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function primez(i) {
+            if (i > 0) {
+                var res = true;
+                for (var j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        res = false;
+                    }
+                }
+                return res;
+
+            } else if (i < 0) {
+                var res = true;
+                for (var j = 2; j > i; j--) {
+                    if (i % j == 0) {
+                        res = false;
+                    }
+                }
+                return res;
+            }
+
+        }
+
+        var gCols = prompt("how many columns?");
+        var gRows = prompt("how many rows?");
+        var res = "<table id='proteus'>";
+        gCols++;
+        gRows++;
+        for (var i = 1; i < (gRows); i++) {
+
+            res += "<tr>";
+            for (var k = 1; k < gCols; k++) {
+                if (primez(k)) {
+                    res += "<td class='sec'>" + k + "</td>";
+                } else {
+                    res += "<td>" + k + "</td>";
+                }
+            }
+            res += "</tr>";
+        }
+        res += "</table>";
+        document.getElementById("ans").insertAdjacentHTML("afterbegin", res)
+        var paintjob = document.getElementsByClassName("sec");
+        for (var i = 0; i < paintjob.length; i++) {
+            paintjob[i].style.backgroundColor = "yellow";
+
+        }
+    </script>
+</body>
+
+</html>

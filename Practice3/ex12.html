@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+
+<body>
+    <section>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function espalidromo(word) {
+            word = word.toLowerCase();
+            var reverese = "";
+            for (var i = word.length - 1; i > -1; i--) {
+                reverese += word[i];
+            }
+            if (word == reverese) {
+                return true;
+            }
+            return false;
+        }
+        var res = "";
+        do {
+            res = prompt("dame una palabra");
+        } while (!/^[a-zA-Z()]+$/.test(res));
+        var answer = "<div><h3>" + res + " no es  palindromo</h3></div>";
+        if (espalidromo(res)) {
+            var answer = "<div><h3>" + res + " es  palindromo</h3></div>";
+        }
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+
+    </script>
+</body>
+
+</html>

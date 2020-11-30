@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 17</h1>
+    </header>
+    <script>
+        var num1 = parseInt(prompt("Give me a number"));
+        if (typeof num1 == "number"&&num1<11&&num1>0) {
+            document.write("<table>");
+          
+                document.write("<tr>");
+                var counter=0;
+                while(counter!=10){
+                    document.write("<td><h2>"+counter+"</h2></td>");
+                    counter++;
+                }
+                document.write("</tr>");
+                
+                document.write("<tr>");
+                counter=0
+                while(counter!=10){
+                    document.write("<td><h2>"+num1*counter+"</h2></td>");
+                    counter++;
+                }
+                document.write("</tr>");
+            
+            document.write("</table>");
+        } else {
+            document.write("<h2>Invalid data type exception</h2>");
+        }
+    </script>
+</body>
+
+</html>

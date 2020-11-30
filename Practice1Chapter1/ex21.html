@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 23</h1>
+    </header>
+    <script>
+        var num1 = parseFloat(prompt("Give me a number"));
+        if (typeof num1 == "number" && num1 > 2) {
+           
+            document.write("<h2>");
+
+            var result=0;
+            while(num1!=9999){
+                    num1 = parseFloat(prompt("Give me a number again or give me a 9999"));
+               if(num1!=9999){
+                    result++;
+               }
+            }
+            document.write("Hemos introducido "+result+" numeros");
+            document.write("</h2>");
+        } else {
+            document.write("<h2>Invalid data type exception</h2>");
+        }
+    </script>
+</body>
+</html>

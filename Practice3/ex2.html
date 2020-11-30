@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <section>
+        <article id="checks"></article>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function translateDay(num){
+            switch(num){
+                case 0:
+                    return "Dom";
+                break;
+                case 1:
+                    return "Lun";
+                break;
+                case 2:
+                    return "Mar";
+                break;
+                case 3:
+                    return "Mie";
+                break;
+                case 4:
+                    return "Jue";
+                break;
+                case 5:
+                    return "Vie";
+                break;
+                case 6:
+                    return "Sab";
+                break;
+            }
+        }
+        let dia;
+        let checGetDate = new Date();
+        let checks = "<div><h3>El dia de semana del dia " + checGetDate.getDate()  + " del mes "+(checGetDate.getMonth()+1)+" es " + checGetDate.getDay() + " o en lenguaje quasi humano: "+ translateDay(checGetDate.getDay())+"</h3></div>";
+        document.getElementById("checks").insertAdjacentHTML("beforeend", checks);
+        do{
+            dia=prompt("Dame un numero de dia 0 siendo Domingo,1 Lunes y 6 Sabado");
+        }while(isNaN(dia)||dia<0||dia>6); 
+        dia=parseInt(dia);
+        let answer="<div><h3>El dia de numero introducido es "+translateDay(dia)+" </h3></div>";
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+
+    </script>
+</body>
+</html>

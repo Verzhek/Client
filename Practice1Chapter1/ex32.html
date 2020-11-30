@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio 32</h1>
+    </header>
+    <script>
+        function weatherPrediction(weather1,weather2){
+            weather1=(weather1).toLowerCase();
+            weather2=(weather2).toLowerCase();
+            alert(weather1 +" "+weather2);
+            const weather={
+                SOL:"sol",
+                NUBLADO:"nublado",
+                LLUVIA:"lluvia"
+            }
+            
+            alert(weather.SOL); 
+            var result="La predicion es ";
+        /**  if(weather1!=weather.SOL||weather1!=weather.NUBLADO||weather1!=weather.LLUVIA){
+                throw new Error("Tiempo1 esta incorrectamente introducido por favor revisa ");
+            }
+            if(weather2!=weather.SOL||weather2!=weather.NUBLADO||weather2!=weather.LLUVIA){
+                throw new Error("Tiempo2 esta incorrectamente introducido por favor revisa ");
+            }*/
+            if((weather1==weather.SOL&&weather2==weather.SOL)||(weather1==weather.NUBLADO&&weather2==weather.SOL)){
+               result+=weather.SOL; 
+            }else if((weather1==weather.LLUVIA&&weather2==weather.LLUVIA)||(weather1==weather.NUBLADO&&weather2==weather.LLUVIA)){
+               result+=weather.LLUVIA; 
+            }else{
+                result+=weather.NUBLADO; 
+            }
+            return result;
+        }
+        var wt1=prompt("Escribe un tiempo pero solo puede ser sol,nublado o lluvia");
+        var wt2=prompt("Escribe otro tiempo pero solo puede ser sol,nublado o lluvia");
+        document.write("<h2>"+weatherPrediction(wt1,wt2)+"</h2>");
+    </script>
+</body>
+</html> 

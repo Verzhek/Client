@@ -1,0 +1,77 @@
+@import "small.css" (max-width: 768px);
+
+@import "medium.css" (max-width: 1400px) and (min-width: 768px);
+
+@import "extraLarge.css" (min-width: 1400px);
+#contenedor{
+    font-family: sans-serif;
+}
+
+#cabecera p{
+    color: burlywood;
+    text-align: center;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+}
+#cabecera h1{
+    text-align: center;
+    color: rgb(150, 150, 150);
+    padding: 0;
+    margin: 0;
+
+}
+#cabecera h2{
+    text-align: center;
+    color: rgb(150, 150, 150);
+    padding: 0;
+    margin: 0;
+
+}
+nav ul li a:hover{
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+article h4{
+    color: gray;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+article ul{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#columna2 h3{
+    flex-basis: 90%;
+    text-transform: uppercase;
+    background-color: rgb(210, 210, 210);
+    color:rgb(100, 100, 100);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: x-large;
+}
+#columna3{
+    margin: 20px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 15px;
+    border: solid gray 2px;
+   
+}
+#columna3 h4{
+    margin-left: 10px;
+}
+#columna3 ol{
+    margin-left: 10px;
+}
+footer{
+    border-top: dotted gray 3px;
+    border-radius: 3px;
+}
+footer p{
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+}

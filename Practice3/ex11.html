@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+<body>
+    <section>
+        <article id="ans">
+
+        </article>
+    </section>
+    <script>
+        var quest="";
+        do{
+            quest=prompt("texto en el que se va a buscar");
+        }while(!isNaN(quest));
+        var response="";
+        do{
+            response=prompt("text a buscar");
+        }while(!isNaN(response));
+        var answer;
+        if(quest.indexOf(response)>-1){
+            let pos=quest.indexOf(response);
+             answer = "<div><h3>La localizacio de "+response+"< es " + quest.indexOf(response) + "</h3></div>";
+
+        }else{
+            answer="<div><h3>"+response+" no esta en el texto</h3></div>";
+        }
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+    </script>
+</body>
+</html>

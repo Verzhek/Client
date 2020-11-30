@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNI Num Sayer</title>
+</head>
+
+<body>
+    <section>
+        <article id="ans"></article>
+    </section>
+    <script>
+        var numT = parseInt(prompt("Give me a number of 8 digits and ill give you the final character"));
+        var selector = Math.round(numT % 23);
+        var ml = "";
+        switch (selector) {
+            case 0:
+                ml = "T";
+                break;
+
+            case 1:
+                ml = "R";
+                break;
+            case 2:
+                ml = "W";
+                break;
+            case 3:
+                ml = "A";
+                break;
+            case 4:
+                ml = "G";
+                break;
+            case 5:
+                ml = "M";
+                break;
+            case 6:
+                ml = "Y";
+                break;
+            case 7:
+                ml = "F";
+                break;
+
+            case 8:
+                ml = "P";
+
+                break;
+            case 9:
+                ml = "D";
+
+                break;
+            case 10:
+                ml = "X";
+
+                break;
+            case 11:
+                ml = "B";
+
+                break;
+            case 12:
+                ml = "N";
+
+                break;
+            case 13:
+                ml = "J";
+
+                break;
+            case 14:
+                ml = "Z";
+
+                break;
+            case 15:
+                ml = "S";
+
+                break;
+            case 16:
+                ml = "Q";
+
+                break;
+            case 17:
+                ml = "V";
+
+                break;
+            case 18:
+                ml = "H";
+
+                break;
+            case 19:
+                ml = "L";
+
+                break;
+            case 20:
+                ml = "C";
+
+                break;
+            case 21:
+                ml = "K";
+
+                break;
+            case 22:
+                ml = "E";
+                break;
+             default:
+                ml=selector;
+                break;
+        }
+        var answer="<h2>La letra para numero "+numT+" es "+ml+" </h2>"
+        document.getElementById("ans").insertAdjacentHTML("beforeend",answer);
+    </script>
+</body>
+
+</html>

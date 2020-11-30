@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 26</h1>
+    </header>
+    <script>
+        var hex = (prompt("Give me a letter"));
+        if (typeof hex == "string" || hex.length==1 ) {
+            document.write("<ul>");
+
+            var result="";
+            var cacao="";
+            while(hex!="*"){
+                hex = (prompt("Give me a letter again or give me a *"));
+                if(typeof hex != "string" || hex.length!=1){
+                    hex = (prompt("Give me a letter again or give me a * and I mean A Single Letter"));
+                }
+                if(hex!="*"){
+                    result+="<li>caracter introducido:"+hex+"</li>";
+                    cacao+=hex;
+                }
+            }
+            result+="<li>Mezcla resultada:"+cacao+"</li>";
+            document.write(result);
+            document.write("</ul>");
+        } else {
+            document.write("<h2>Invalid data type exception</h2>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+    <section>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function checkLength(str) {
+            if (str.length > 2) {
+                return "El string dado tiene " + str.length + " caracteres";
+            }
+            return false;
+        }
+        do {
+            var str = prompt("Escribe algo");
+        } while (!checkLength(str));
+        let answer = "<div><h3>" + checkLength(str) + "</h3></div>";
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+    </script>
+</body>
+
+</html>

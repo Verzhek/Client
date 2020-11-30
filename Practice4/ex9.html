@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+
+<body>
+    <section>
+        <article>
+            <button>
+                Nuclear
+            </button>
+        </article>
+        <article id="spare"></article>
+    </section>
+
+    <script>
+        function openNuclear() {
+            document.getElementById("spare").style.width = "500px";
+            document.getElementById("spare").style.height = "500px"
+            document.getElementById("spare").style.backgroundColor = "#B7410E";
+        }
+        document.getElementsByTagName("button").item(0).style.textAlign = "center";
+        document.getElementsByTagName("button").item(0).style.width = "300px";
+        document.getElementsByTagName("button").item(0).style.height = "50px";
+
+        document.getElementsByTagName("button").item(0).addEventListener("click",function(){openNuclear()});
+    </script>
+</body>
+
+</html>

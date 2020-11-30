@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <article id="point">
+
+        </article>
+        <article id="add"></article>
+    </section>
+    <script>
+        /**poblaciones =['Localidad', 'Enero', 'Febrero', 'Marzo', 'Abril']
+            *temperaturas = [['Cuevas del Alamanzora',12,13,15,18],['Granada', 4.5, 5.8, 9, 15] ['Madrid', 4, 5.8, 8, 13], ['Soria', 0, 1,6,10]]
+            *Se pide:
+            *·         Calcular la media de  Temperatura por cada población.
+            *·         Calcula la temperatura más alta en Marzo y a que población corresponde.
+            *·         Calcula la media de la temperatura en el mes de abril.
+            *·         Mostrar la población  con peor media de temperatura.
+            *·         Añade la población: ['Málaga', 14, 16.7, 18.4,20.3]
+            *Para ello construye una tabla donde muestres los resultados.*/
+        var temperaturas = [['Cuevas del Alamanzora', 12, 13, 15, 18], ['Granada', 4.5, 5.8, 9, 15]['Madrid', 4, 5.8, 8, 13], ['Soria', 0, 1, 6, 10]]
+        temperaturas.push(['Málaga', 14, 16.7, 18.4, 20.3]);
+        var mediasTPOBL = [];
+        var TempMaxima = [];
+        var tma = 0;
+        var TempMinima = [];
+        var tmi = 50;
+        var aprilWind = 0;
+        var result = "<table><tr><td>Poblado</td><td>Enero</td><td>Febrero</td><td>Marzo</td><td>Abril</td><td>Media</td></tr>";
+
+        for (var i in temperaturas) {
+            let d = new Array(temperaturas[i]);
+            let actual=d.pop();
+            console.log(actual);
+            let name = actual[0]
+
+
+            mediasTPOBL[name] = 0;
+            result += "<tr><td>" + name + "</td>";
+            for (let j = 1; j < actual.length; j++) {
+                mediasTPOBL[name] += actual[j];
+                result += "<td>" + actual[j] + "</td>";
+
+            }
+            mediasTPOBL[name] = mediasTPOBL[name] / (actual.length - 1);
+            if (tmi > mediasTPOBL[name]) {
+                tmi = mediasTPOBL[name];
+                TempMinima = [name, tmi];
+            }
+            if (actual[3] > tma) {
+                tma = actual[3];
+                TempMaxima = [name, tma];
+            }
+            aprilWind += actual[4];
+            result += "<td>" + mediasTPOBL[name] + "</td></tr>";
+        }
+        result += "</table>";
+
+        aprilWind = aprilWind / temperaturas.length;
+        var addendum = "<h3>El poblado mas caloroso del marzo es:" + TempMaxima[0] + " con temperatura:" + TempMaxima[1] + "</h3>";
+        addendum += "<h3>El poblado mas frio es:" + TempMinima[0] + " con temperatura:" + TempMinima[1] + "</h3>";
+        addendum += "<h3>La media del Abril es:" + aprilWind + "</h3>";
+        document.getElementById("point").insertAdjacentHTML("beforeend", result);
+        document.getElementById("add").insertAdjacentHTML("beforeend", addendum);
+    </script>
+</body>
+
+</html>

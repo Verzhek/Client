@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    <section>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function splitSentence(sentence){
+            let regicide="<p>"+sentence;
+            let replacement="";
+            for(let i=0;i<regicide.length;i++){
+                if(/\s/.test(regicide[i])){
+                    replacement+="</p><p>";
+                }else{
+                    replacement+=regicide[i];
+                }
+            }
+            replacement+="</p>";
+            return replacement;
+            
+        }
+         var res="";
+        {
+            res = prompt("dame una sentencia");
+        } while (!/^[\s.,;:a-zA-Z()]+$/.test(res));
+        var answer = "<div>" + splitSentence(res) + "</div>";
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+
+    </script>
+</body>
+</html>

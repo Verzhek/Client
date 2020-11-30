@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMITA</title>
+    <style>
+        section {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            min-height: 1300px;
+        }
+
+        #red {
+            background-color: red;
+            min-width: 300px;
+            flex-basis: 200px;
+        }
+
+        #green {
+            background-color: green;
+            min-width: 300px;
+            flex-basis: 200px;
+        }
+
+        #blue {
+            background-color: blue;
+            min-width: 300px;
+            flex-basis: 200px;
+        }
+
+        #black {
+            background-color: black;
+            min-width: 300px;
+            flex-basis: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <article id="red" onmouseover="paintColor(this)" onmouseout="restauraColor(this)"></article>
+        <article id="green" onmouseover="paintColor(this)"onmouseout="restauraColor(this)"></article>
+        <article id="blue" onmouseover="paintColor(this)"onmouseout="restauraColor(this)"></article>
+        <article id="black" onmouseover="paintColor(this)"onmouseout="restauraColor(this)"></article>
+    </section>
+    <script>
+        function paintColor(elemento) {
+            document.bgColor = elemento.id;
+            elemento.style.backgroundImage=" url(./weebs.jpg)";
+        }
+        function restauraColor(elemento) {
+            elemento.style.backgroundImage="none";
+            elemento.bgColor = elemento.id;
+            document.bgColor = "white";
+
+
+        }
+
+    </script>
+</body>
+
+</html>

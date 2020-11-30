@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 30</h1>
+    </header>
+    <script>
+        function paintSquare(num1, letter) {
+            result = "<table>";
+            for (var i = 0; i < num1; i++) {
+                result += "<tr>";
+                for (var j = 0; j < num1; j++) {
+                    result += "<td>" + letter + "</td>";
+
+                }
+                result += "</tr>";
+            }
+            return result;
+        }
+
+        hex = (prompt("Give me a letter"));
+        num = parseInt(prompt("Give me a number"));
+        document.write(paintSquare(num, hex));
+
+    </script>
+</body>
+
+</html>

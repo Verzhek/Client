@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 35</h1>
+    </header>
+    <script>
+        var hex = (prompt("Give me a letter"));
+        function printout(hex) {
+            if (typeof hex == "string" && hex.length == 1) {
+
+                var res = "<ul>";
+
+                var result = "";
+                var count = 0;
+                while (hex != "*") {
+                    hex = (prompt("Give me a letter again or give me a *"));
+                    if (typeof hex != "string" || hex.length != 1) {
+                        hex = (prompt("Give me a letter again or give me a * and I mean A Single Letter"));
+                    }
+                    if (hex == "a" || hex == "e" || hex == "u" || hex == "i" || hex == "o") {
+                        count++;
+                    }
+                    if (hex != "*") {
+                        res += "<li>caracter introducido:" + hex + "</li>";
+                    }
+                }
+                res += "<li>vocales introducidas:" + count + "</li>";
+                res += ("</ul>");
+                return res;
+            } else {
+                document.write("<h2>Invalid data type exception</h2>");
+            }
+        }
+        document.write(printout(hex));
+    </script>
+</body>
+
+</html>

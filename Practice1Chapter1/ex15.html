@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 15</h1>
+    </header>
+    <script>
+        var num1 = parseInt(prompt("Give me a number"));
+        if (typeof num1 == "number" && num1 > 0) {
+           
+            document.write("<h2>");
+
+            var count1=0;
+            var count2=1;
+            document.write(count1+";");            
+            document.write(count2+";");            
+
+            for (var i = 1; i < num1 + 1; i++) { 
+              
+               document.write(count1+count2+";");
+                    var n=count1
+                    count1=count2;
+                    count2=n+count2;
+            }
+           
+            document.write("</h2>");
+        } else {
+            document.write("<h2>Invalid data type exception</h2>");
+        }
+    </script>
+</body>
+
+</html>

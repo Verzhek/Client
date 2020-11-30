@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 9</h1>
+    </header>
+    <script>
+        var num1 = parseInt(prompt("Give me a number"));
+        if (typeof num1 == "number") {
+            document.write("<h2>");
+            if (num1 > 0) {
+                for (var i = 0; i < num1; i++) {
+                    document.write(i + ",");
+                }
+                document.write(num1)
+            } else if (num1 < 0) {
+                for (var i = 0; i > num1; i--) {
+                    document.write(i + ",");
+                }
+                document.write(num1)
+            }
+            document.write("</h2>");
+        } else {
+            document.write("<h2>Invalid data type exception</h2>");
+        }
+    </script>
+</body>
+
+</html>

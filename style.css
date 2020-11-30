@@ -1,0 +1,147 @@
+ul {
+    list-style-type: none;
+}
+
+header {
+    display: inline-block;
+    width: 100%;
+    grid-column: 2/span 1;
+}
+main{
+    grid-column: 2/span 1;
+
+}
+
+body {
+    background-image: url("images/bodybkg.gif");
+    background-repeat: repeat;
+    display: grid;
+    grid-template-columns:1fr 7fr 1fr;
+}
+
+header ul {
+    background-color: rgb(40, 15, 0);
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height:50px;
+    justify-content: space-around;
+  
+}
+header ul li  {
+    margin-top: 15px;
+    flex-basis: 15%;
+}
+header ul li a {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header ul li a:hover {
+    color: burlywood;
+}
+
+header h1 {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: burlywood;
+    text-shadow: 2px 2px black;
+}
+header div{
+    background-image:url("images/introimage.png");
+    background-size: cover;
+    border-radius: 15px;
+    height: 340px;
+    display: grid;
+    grid-template-columns:35% 35% 20% ;
+    grid-template-rows: 1fr 2fr ;
+    
+
+}
+header div h2{
+    color: whitesmoke;
+    font-family: sans-serif;
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: xx-large;
+}
+header div p{
+    color: burlywood;
+    font-family: sans-serif;
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+    font-size: large;
+    margin-left: 10%;
+
+}
+
+main{
+
+    margin-top: 20px;
+    grid-column: 2/span 1;
+}
+section{
+    background-color: whitesmoke;
+    border-radius: 15px;
+    display:flex ;
+    flex-flow: row wrap;
+    justify-content: right;
+    
+}
+article{
+    flex-basis:20%;
+    background-color: burlywood;
+    margin: 5px;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+} 
+article h3{
+    font-weight: 300;
+    font-family: sans-serif;
+    text-decoration: underline;
+    font-size: x-large;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+article figure img{
+    margin-top: 5px;
+    border: solid white 6px;    
+}
+article p{
+   
+    flex-basis:75%;
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+footer{
+    margin-top:20px;
+    background-color: rgb(40, 15, 0);
+    border-radius: 15px;
+    grid-column: 2/span 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+footer div{
+    flex-basis: 28%;
+    color:whitesmoke;
+    font-family: sans-serif;
+}
+footer div a{
+    color:rgb(150, 150, 150);
+}
+footer div:nth-child(2){
+    text-align: center;
+}
+footer div:nth-child(3){
+    text-align: right;
+}

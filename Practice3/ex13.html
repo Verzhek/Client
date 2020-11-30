@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+
+<body>
+    <section>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function hasDog(word) {
+            word = word.toLowerCase();
+            if (word.indexOf("@") > 0 && word.indexOf(".com") > word.indexOf("@")) {
+                return true;
+            }
+            return false;
+        }
+        var res = "";
+        do {
+            res = prompt("dame un email");
+        } while (!/^[A-Za-z0-9@.]+$/.test(res));
+        var answer = "<div><h3>" + res + " no es  email y no tiene @ en sitio correcto</h3></div>";
+        if (hasDog(res)) {
+            var answer = "<div><h3>" + res + " es  email y tiene @</h3></div>";
+        }
+        document.getElementById("ans").insertAdjacentHTML("beforeend", answer);
+
+    </script>
+</body>
+
+</html>

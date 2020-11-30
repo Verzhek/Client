@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 28</h1>
+    </header>
+    <script>
+        function primez(i) {
+            if (i > 0) {
+                var res = true;
+                for (var j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        res = false;
+                    }
+                }
+                return res;
+
+            } else if (i < 0) {
+                var res = true;
+                for (var j = 2; j > i; j--) {
+                    if (i % j == 0) {
+                        res = false;
+                    }
+                }
+                return res;
+            }
+
+        }
+        var hex =Math.round (Math.random()*1000);
+        if(primez(hex)) {
+            document.write("<h2>" + hex + " es primo</h2>");
+        } else if (!primez(hex)) {
+            document.write("<h2>" + hex + " no es primo</h2>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+</head>
+
+<body>
+    <section>
+        <article>
+            <form>
+                <label for="name">Name</label><input type="text" id="name">
+                </br>
+                <label for="surname">Surname</label><input type="text" id="surname">
+                </br>
+                <label for="age">Age</label><input type="number" id="age" min="1" max="100">
+                </br>
+                <label for="email">Email</label><input type="email" id="email">
+                </br>
+                <label for="today">Date of Signing</label><input id="today" type="date" id="date">
+                </br>
+                <input type="submit" id="send" value="send">
+            </form>
+        </article>
+    </section>
+    <script>
+        function conditioned() {
+            if (/^[a-zA-Z()]+$/.test(document.getElementById("name").value)) {
+                if (/^[a-zA-Z()]+$/.test(document.getElementById("surname").value)) {
+                    if (parseInt(document.getElementById("age").value) < 60 && parseInt(document.getElementById("age").value) > 18) {
+                        if (/^[A-Za-z0-9@.]+$/.test(document.getElementById("email").value)) {
+                            let date = new Date();
+                            let day = date.getDay();
+                            let month = date.getMonth();
+                            let year = date.getFullYear();
+                            let prin = month + "/" + day + "/" + year;
+                            if (document.getElementById("today").value == prin) {
+                                return true;
+                            } else {
+                                console.log(prin +" | "+document.getElementById("today").value)
+                                alert("This form can only be sent on the day of signing")
+                            }
+                        } else {
+                            alert("Pleas introduce an actual email")
+                        }
+                    } else {
+                        alert("To signe must be younger than 60 and than 18")
+                    }
+                } else {
+                    alert("Invalid surname")
+                }
+            } else {
+                alert("Invalid name")
+            }
+            return false;
+        }
+        function eval() {
+            if (!conditioned()) {
+                console.log(conditioned());
+                document.getElementById("send").disabled = true;
+            } else {
+                document.getElementById("send").disabled = false;
+            }
+        }
+        document.addEventListener('load',eval, false)
+        document.getElementById("name").addEventListener('change',eval, false)
+        document.getElementById("surname").addEventListener('change',eval, false)
+        document.getElementById("age").addEventListener('change',eval, false)
+        document.getElementById("email").addEventListener('change',eval, false)
+        document.getElementById("today").addEventListener('change',eval, false)
+
+    </script>
+</body>
+
+</html>

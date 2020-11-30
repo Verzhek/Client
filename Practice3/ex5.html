@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <section>
+        <article id="checks"></article>
+        <article id="ans"></article>
+    </section>
+    <script>
+        let vals = [];
+        for (var i = 0; i < 4; i++) {
+            let num = 0;
+            do {
+                num = prompt("Dame un numero");
+            } while (isNaN(num));
+            vals.push(num);
+        }
+        function maximoSucesion(vals) {
+            let maximo = vals[0];
+            for (var i = 1; i < vals.length; i++) {
+                maximo = Math.max(maximo, vals[i]);
+            }
+            return maximo;
+        }
+        function minimoSucesion(vals) {
+            let minimo = vals[0];
+            for (var i = 1; i < vals.length; i++) {
+                minimo = Math.min(minimo, vals[i]);
+            }
+            return minimo;
+        }
+        let ans1="<div><h3>El numero maximo es "+maximoSucesion(vals)+"</h3></div>";
+        let ans2="<div><h3>El numero minimo es "+minimoSucesion(vals)+"</h3></div>";
+        document.getElementById("checks").insertAdjacentHTML("beforeend", ans1);
+        document.getElementById("ans").insertAdjacentHTML("beforeend", ans2);
+
+
+    </script>
+
+</body>
+
+</html>

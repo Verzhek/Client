@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <section>
+        <article id="ans"></article>
+    </section>
+    <script>
+        function generateBetSheet(){
+            let result="<table>";
+            for(var i=2;i<18;i++){
+                result+="<tr>";
+                if(i<=7){
+                    result+="<td>Equipo 1 vs Equipo "+i+"</td>";
+                }else if(i>7&&i<17){
+                    result+="<td>Equipo 7 vs Equipo "+i+"</td>";
+
+                }else if(i==17){
+                    result+="<td>Equipo 7 vs Equipo 1</td>";
+                }
+                var choice=Math.round(Math.random()*100);
+                console.log(choice);
+                if(choice<40){
+                    result+="<td style='background-color:red'>1</td>";
+                    result+="<td >X</td>";
+                    result+="<td>2</td>";
+                }else
+                if(choice>=40&&choice<60){
+                    result+="<td>1</td>";
+                    result+="<td style='background-color:red'>X</td>";
+                    result+="<td>2</td>";
+                }else
+                if(choice>=60){
+                    result+="<td>1</td>";
+                    result+="<td >X</td>";
+                    result+="<td style='background-color:red'>2</td>";
+                }
+                result+="</tr>";
+            }
+             result+="</table>";
+            return result;
+        }
+        document.getElementById("ans").insertAdjacentHTML("beforeend",generateBetSheet());
+    </script>
+</body>
+</html>
